@@ -114,19 +114,33 @@ a{
 
 .header-contacts-item + .header-contacts-item{
     margin-left: 50px;
+    
 }
 
 .header-contact{
+    display: inline-flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
+    /* feel: var(--text-color); */
+}
+
+.header-contact::before{
+    content: '';
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    /* background-color: #2196F3; */
+    /* background-image: url(../icon-mail.svg);
+    background-size: contain; */
 }
 
 .nav-link.current, .nav-link:hover, .nav-link:focus,
 .header-contact:hover, .header-contact:focus{
     color: var(--accent-color);
+    /* feel: var(--accent-color) */
 }
 
 /* --------------------------------HERO--------------------------------- */
@@ -188,6 +202,33 @@ a{
 
 .features-list-item{
     width: 270px;
+}
+
+.features-list-item::before {
+    content: '';
+    display: inline-flex;
+    width: 270px;
+    height: 120px;
+    background-color: var(--background-light-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70px;
+}
+
+.antenna::before{
+    background-image: url(../icon-antenna.svg);
+}
+.clock::before{
+    background-image: url(../icon-clock.svg);
+}
+.diagram::before {
+    background-image: url(../icon-diagram.svg);
+}
+.astronaut::before {
+    background-image: url(../icon-astronaut.svg);
 }
 
 .features-list-item:not(:last-child){
